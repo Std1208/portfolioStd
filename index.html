@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="mediaqueries.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+</head>
+
+<body>
+  <nav id="desktop-nav">
+    <div class="logo"><p class="animate__animated animate__zoomIn"> Sreekanth Kumbagiri</p></div>
+    <div>
+      <ul class="nav-links">
+        <li><a class="active" href="#profile">Profile</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+  <nav id="hamburger-nav">
+    <div class="logo">Sreekanth Kumbagiri</div>
+    <div class="hamburger-menu">
+      <div class="hamburger-icon" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <div class="menu-links">
+        <li><a href="#profile" onclick="toggleMenu()">Profile</a></li>
+        <li><a href="#about" onclick="toggleMenu()">About</a></li>
+        <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
+        <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+        <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+      </div>
+    </div>
+  </nav>
+  <section id="profile">
+    <div class="section__pic-container">
+      <img src="images/profile-pic1.png" alt="John Doe profile picture"/></div>
+    </div>
+    <div class="section__text">
+      <p class="section__text__p1">Hello, I'm</p>
+      <h1 class="title"> Sreekanth Kumbagiri</h1>
+      <p class="section__text__p2">Student</p>
+      <div class="btn-container">
+        <button class="btn btn-color-2" onclick="window.open('RESUME.pdf')">
+          Download CV
+        </button>
+        <button class="btn btn-color-1" onclick="location.href='./#contact'">
+          Contact Info
+        </button>
+      </div>
+      <div id="socials-container">
+        <img src="images/linkedin.png" alt="My LinkedIn profile" class="icon"
+          onclick="location.href='https://linkedin.com/in/pramodthorat7/'" target="" _blank />
+        <img src="images/github.png" alt="My Github profile" class="icon"
+          onclick="location.href='https://github.com/'" />
+      </div>
+    </div>
+  </section>
+  <section id="about">
+    <p class="section__text__p1">Get To Know More</p>
+    <h1 class="title">About Me</h1>
+    <div class="section-container">
+      <div class="section__pic-container">
+        <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAoHCBYSFRgVFRUZGBgYGhgcGhoZGRgYGBoaGhoaGhoYGBocIS4lHB4rIRgYJjgnKy8xNTU1GiQ7QDs0Py40NTEBDAwMDw8PEA8PEDEdGB0xMTExMTE/MTQxMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMf/AABEIASsAqAMBIgACEQEDEQH/xAAbAAACAwEBAQAAAAAAAAAAAAAFBgADBAIHAf/EAEMQAAIBAgIGBwYDBwIGAwEAAAECAAMRBCEFEjFRYXEGEyJBgZGhMkJSscHRguHwBxQjYnKSsqLxFTNTwsPSQ3ODNP/EABUBAQEAAAAAAAAAAAAAAAAAAAAB/8QAFBEBAAAAAAAAAAAAAAAAAAAAAP/aAAwDAQACEQMRAD8A8ZkkkAgSSaKVKfK1Gx4GBQBPrLaaKdKXVaF15ZwMEkvWjPvUwM5khPR2AFUte+qBtG87Lessr6EcZqQ3A5H7QBlHM23zR1MpqUmpsNYFSN43fOFUp3AI2HOBg6mb8Kl15ZTrqZfg0sbb/p+jIOOpg3SRtZfE/SMLU7Ak7BF7E4ZnYtlnszOzu7t0DBJL2wrDd6zrD4cs1su+3E7pRmIkmvEYYrtBEykWgfJJJIEnStbunMkC8YlhstPjYhjtN7cBKZIG6hiV94W47RClFA4yII4RdndOoym6kg8IBR6QW98rTBXr62Q2epkr4hntrG/625Ql0YwHW1gSOzTsx5+6PPPwMA7ozR/V01UjPa39R2+WzwmvqYQ6qTqZANfDBhYgEbiLiBKrBHZVUaoNgB3W228bxrqJqqW3AnyiyaUD4hU8OctSnYg7pX1M5euKQuzWG4535CBb0gq6lKw2vkOW0nyy8Ziwq6yIeFvLL6QdpTSBrlcrKosB43J+XlCmge1TI+Fj5EA/O8oqqUZjenbMbRDlSjMlWjIO6D9Yl+8ZMOP2mTEYNT3eWU6oP1b37jkw4flCVWncXEIW6uEtsPnJC1ajPkBfkhKpottqm/A5HwMwVKbKbMCDuOUquJJJ2iXgcqt5elKW06U1pSkAuutjaem6G0I2GwyG3bPaqA8dg/CLesXuiGhf3nGXYXSiFdtxb3F8SCeSmerGlKFNKgO0W9RL1QHZnLcfgerew9k5r9vD7TOKdtkCjSq6tM/zED6n5RfdQu2GNNO9kF/i55av3MCmlA6waipUVLWDEgnv2E5eU40j0MdiWp1dY7n2/wBw+whDQdC9dOGsf9LRu6qB45jtEVqH/Mpso37V/uGU39FX7brvUH+02/7p6maUG/8ABKAcVBTCtncpdbg7bhcjAXnoz5/wp292w3tl6bY7DCKvsqBy+8z1aUgUf+Bge2xPAZCCdIYz92qdXq3TVBA94bdhO3ZsMd61KIfTOlq1UO9LeIZvuIGkMtRdZCCPlwI7p9ixh67IbqbH0PAjvklDdRpTW2CRxqsoI4jZxE+0KcIUacgBjQtK9mQeBYfIzRT0BR+A/wB7/eG6uGy1h3bZ1SpwBidHqO5h+I/WXp0bpb381/8AWGKdOGND4PXe5GS5+PcPr4QLdAaFTC09RQbsdZydpNgAPAACE+rmxacz1aoGS58e6UYtIYZWQg7RmvMRawzpUQOjBlbMEfrI8I0MpJuZ5N++PgMVWRc06x9ZDsKlrqR8LapGfnAYtN0/Y/H/ANsF9XDZqLjFRqHa9q42FD2cn+H9WvDWj9BpTsz2d/8ASOQ7+Z9IATQmjnQ9ay2UA2ByY37wN0NCsu4+kKmleDHo2JG6B861ePlKnqL+gZYacqenAtw+JQkIWGsb6oORNu4X2mdVacVtNZuAPdHqc/tNmitP2slc8BU/9/v574BCrTiH0/p2akd4ceWr956RUQEXGYOwjMHlEb9otL+HTbc5Hmt/+2QIEkkkoacFiXTY2W45j8ofwWkgfbW3EZjy2/OAqCTfRSQNeFZXHZIP67xPvUapt5coDoLbMZSvH9IXpsEQqxX2iwvY/CLEeMoaaVONODpCkgB27TvJP6t4TzbQnSWp11PXCahYAkKQRfINct3Eg+E9JRYHTuW4DdOerlypOtSBn6ueWdP8HqYtmA/5iI/iBqH/AAE9b1IiftLwmVCpuLofHVZf8XgY/wBmCdrFcsP/AOeP3VxK/ZgmeK5Yf/zx+1IGfq5ixlGxvv8ApCbWAuSAN5yEyvVSp2FOsduWwW4wBppyp0m405i0g2qjHhYczl9YChjO27NvJ8u70g+rThSokx1UgTRul3w/ZPbTvXvHFD3ctnzn3pxUXEYVHpnW/ioLD2rlXGqRtvcjLjMn7uzsFRSzHIAbTGjROgRQGs51nO34V4DeePlxBW0B0W6u1WuLvtVNoTcW3tw2Dnskca6SSBARCDYzfRnSIGFjO/3Zx7Clz3AWBJ3G+Q5wKNJaQ6pbL7bbOA+L7QHSMP4PojWqtr16ipc5he21t18gtvGNmjOjOGpWOprtvc63+n2R5ShJ0fo+rWyp02fiB2fFjkPEz1XA4soiLX7NTUXW94E7L3G+0toiwAGQHcNk40lQ1k1htX5d/wB4G6njEPvr4m3zl6up2MDyIMV1l9LCM2rsGtfV1iBrW26u+3CAxxc6e4fXwbm2aMjjz1D6OYQo6NYbXI/pv8/yms4RSpR7upFiHOsCNxGwiAldAkfDpVqujBKvVimdmtqdZrHP3e2LHvzjFV0m59my+p8zCGk6etTP8tiPD8rwDA7dyxuxJPE3hTQ9Kyl9+Q5Db6/KCVW5sNpjLRp6ihR3C35wK8RQ1sxt+cWtOvYKu8knw/39I1wfj8ElTtFQWG/dugIlSV4fBvWfUQXPfuA3se4Rlq4NPgXymPEUCFK03an39glQT/MBtgEsBopMMuWbkdpzlfgNyyjF6RpJ7VVBw11v5XvEzSFNwbPc7iSTfkTBVaA24vpDhl9+/wDSrH1taSIdeSQMVCEMO1rES5dED3XtwIv6iWro5192/wDSb+m2AWwj6wBhClAWEc02zBG8EWh2iZRtpzSgvB4xKjjy+8+/vDNwHCBo0fobWcl/YU5b277cBvhnSmjUxFM02FhkUIGaMPZZeXyvM2g6mTJ+IfI/SFoHnC6WxGDc0qvb1DazbbdxV9tiNl7w9gNPUathrajfC9h5NsPz4TZ0o0J+8prIP4qA6v8AMNpQ/TjzM82ItkRzB+RgeoOtwQdhFvOLLoQSveDbx2QLgNMVaNgr6y/A3aXw7x4GPegcOtRVxLJZnzVb3C92sN5Nr+MDnRmheyWqXDEHVAyKXHtf1fL5LNbG16bsjO11JBvns78+6ehxR6YYLVdaoGT9lv6gMj4j/GALXTNYe/fmq/QT42n6o7kP4T9DMEqeBZj9PsLHUW53EiC6vSF/gXzMz49rtyEG1YGyvpxqnY6pWubAXJuTstxlmM0C4UMpBa3aS+w7lY7fG019GtF//O43imD5F/oPHhDVaB5rikKkhgQR3EWM+R10hhUqCzqDuPeOR2iSQFqE30ZgoQhRlG1EBFiARxzmTSFPUZQuSkbO64OfzE2UZxpRLorbj6H8wIGOnNaTJTmunAIaOqarqe4mx8cvtGKAsLo1mF27A2/zeXd4zecU2/0gbol9M9B2viaY/wDsA/zH1898YmqsfeMy41+zY562We7vgedYagajqi7XZVHNjb6z12jSFNVRclUBRyUWHyiX0d0RqYsufYRS6k7LtdVB4jteQjg+KA2Z+ggaIP01TR6Lq5A7Ja+4r2gfT5yPiGPfblAPS/E9Xg6x72XUH/6EIfRifCAsUaquoZSCD3j9bZy8UsHjHpG6HmDsPP7xgw2PWsp1L69vY2tfhb2hygYMS1yTxneidGnEPY+wubnh3KOJ+8P4DowWs1Y6o+AHtH+o93IZ8oYr4JAmogCAezq5WO/7wKnUAWAsBkANgA2ATDWmKrjalMlWN7dzZ+u2VHSyn2lI4jMQOq8+ylsSj+ywPDYfIySBewWPqJ7LsOF7jyOUYMF0gce2qtyup+o9IrUIRowHfB6epN7WsnMXHmPtCz1kqowR1bK+RF8s9m3uiDRjX0e0Ze1VxxQH/I/TzlG7A6Pd7E9kbzt8BGHBYNKewXO85n8pwhgvH9JUp9mnZ23+4PH3vDzgMOIayHjlMM816SacxGvTcVXV7uRqmwA7OWrsIz2EZ2zvCehOnatZMSuqf+ogJX8SbRzF+QgO8w4t7tbdNNLEo6a6MroRcMpBB5EQez95MC3D1NU8DthCA3xQGzP0nzD6fVH6uoNUWGq/cL9zbuf+8A7E39pOK1aNOnfN6hbmEX7uscVNxcZg7CNh5Tzb9o2J1sSidyIP7nJJ9AkBSlujcb+71qdX4HBP9Oxx4qWHjKpS8D21yCLjMHZymSrBnQ/H9dhEue1T/ht+C2r/AKCkJ1YAXS2E6way+0PUboqVo64lwouYj6ZxoSsQwsGAa47ibjPy2wMdeSSsZJBWiFTYixE3UZvr4QVBuYbD9DwlGEpIjXrNqKpzHvMfhUd/PYLwDnR/RnWEO47A2D4j9oyY7TVOhkTrP8C7R/Udi/PhEzFdIXqDUpjq0GQt7ZHMezyHnMdKUHMdpmpXyY6qfAuS+PxeMppzLTmqnADdIm7aDcpPmfygeEtPteryVR8z9YNgG+imJdK4RXYK4bWUEhWspIJGwnLbHQmIvRn/APpTk/8AiY8wJAulx2/wj5mGoH0wO2P6fqYFmidNPhzb2070J2cUPd8oP0/oPE4is+JSkXSpZk1WQnU1QFut7g2AyErj/wBHn1sNT4Aj+1iPpA8hxOCqU/bpun9aMvzEwuZ78YLxuh8PVzehTY7yi639wF4Hnv7PcfqVnok5VF1l/rS5IHEqWP4I74qqFHHuEH1Oi+GoutamrI6NddV2IvuIa+RFweBkrsSbmBjxLljcxM6WJ20O9SPIn/2jjVip0tTJDxYedj9IC3QxpTI5ru7xxH2kmOtJIPTKEq0po7rF11HbUf3D4ee784A0b0qQ2FVSp+Je0vltHrG7AYpKg1kdWH8pvbmO7xlCtRm+lNmmNHap6xB2Se0NxPvcj8+cx0oGunNdOZac1U4C1pdr1n/CPJRMc04sF6r2z7behtOqeGA25/L84Gvo0LV1Y7AGz/CRHgRR0SO3yU/SHqdUrsPh3QCEEaZHaXkfnCVPEBtuRg/TQzTk30gDI69EXvQI+F2HmFb6mC9EdFatazP/AAk3sO2R/KndzNvGMT4FMJZKVwLXYk3LHMXPgO60DdKakyjEtv8AQQN0n00+HoM6ausWVV1gSMznkCPdDQNWNqax4DZ94PqxHrdL8Sf+mOSfcmD8R0rxJ99RyRPqDAeq0WelS/w1O5x6hot1uk2KO2sf7EHyWZMRpevVGq9QsN1h9BAprSShqpO2fYH2jCWFqMhDKxU71JB8xBtIzfQgNej+ktRRq1FFRTkb9lrcwLHy8YZwWh3qAOnZRs1D5PbiBf8AOB+i2h+ubrHHYU5A++w7v6R3+W+ehUoA7DdHfiqeAX6k/SbK2jKFCm9R9Zgik5ta57hlbMmw8YSpxa6cY+ypQU+1235DJR4m5/CICmDe5sBckm285mfZws7gb9Djtsf5fmR9oXgvQozf8P1hSBI5dG9FKqLVdQXOaawuUU7NW+wnbfiIv6C0d19UKR2F7T8u5fE5crz0C0CQDpVr1DwAHpf6w9aLuOa9R+dvLL6QM0TP2hV+zSTeXc/hAUf5N5RznnHTmvr4kr8CIvibuf8AIQFWpMlWa6kyVYGKpOJ3UOc4gSSSSB6nTpqdqg8wDNCaNotto0zxKJfztKqE30ZB3hqnV9gKNVcgALWHcBaFsNWVthz3GB6g7XO369JfSlDCjAAkmwAJJ3AbTPMdI4016r1D7xyG5Rko8gPWO2IRqlN6esVDjVuLEgHbt7js5GJWkdAYuj2kVayDvQEOOaE38iYFSzuBhpJxcFQCMiCCCDuIvlPv/E33L5H7wG3Qw7LHiPl+cbtFdHHq2apdE3e+3IH2RxPlPv7OdFD92TEVEGvULOl9ipeyEDeQutfcwjpAF4nRyU6VqahdXPLad5J2k/aCr8Y0ERbxNLUdl3HLl3ekCu/GDmxnV1GR/ZJuD3i+fle8IwPplLMp3i3kfzEKLqb7O+eR6br9ZXqvvqPbkDZfQCP2GxrUwV7iDa/unuPK8xYLoAhAariC4NjamoUH8TXuPAQjzipKqeEqVf8Al03fuuqkr4tsE9lw3RjC0s1oKxGes/bN9417gHlaa6ii1rZbu6B45h+h9ds31UHE6zeS3HrCNLonTT22Zjwsq+WZ9Z6BicMp7rcoJxOFI2Z+hgLw0fSp+yijja58znJNVfv4XHiMiJ9kGrDVQ2w3hGi0VMPUtsMMYXHfFnxgF65zB4fr5y2k0wYnFIEDlgFG0k2A535Rfx3TJKfZorrt8Ruqj6t6c5Q9I4AuTYDaTkBzgnH9L6NO4p/xW/lNk/v7/C884xmmKuIP8RyR3KMkHJRl4m5n3CqajKi7WIA5k2gPuEojHoauJRDrGyao1SqrkSGHaOd9pI7MH1+hes6inV7DMobXHaVSwDEMMiQDssNkYsKgpoqLsUADwEu14DzSxCU1VESyooVRsAVRYDyE+NjGOywgyjX1lVt4BnfWQNNTEGxLMbDMxbfFkuW3nZ8h5TZpbFaqao2t8ht+kC68AvSxIbgd32mXTAugO4/Mf7THry5S1UGn3nYT3Wzz8vWAMLQhorSvVnUc9g/6Tv5b/OVPoaqNgVuTfe0xV8BVXbTbw7X+N4De7zLVaAtGaSan/DqBgvulgRq8Dfu+XyNCmWz2D9bIGZwWNgJz1QXM7fQTW9lFhA+nMTqUKrfCjkc9U29YHmNHTJWo7G5V3ZiO8azE3HHPxkgRjJAaqFSEaNSB9UrxG/7zXRqSDL0sxF1Rd5LHwFh8zFmEtPVtaqR8IA+v1g2UWI0aeh2H1naodiCw/qb7C/8AdA2B0LUqWJ7K722+C7T6QrgdLDDXpogZFY9omzMe8nIjllstAelqTrrItUOkdM+0rL5EemfpN1LS9J9lRfHsn/VaA5aJxF0t8JI88/rN4eLWhMTdioN9YZWzzH+8ZcOurmdvygB9J0qhcnUNhkLWOXIQczkbbjnlGbGHY3gfpMbODtz5wAnWQtoZci578hyG39cJw+FRvdA5ZfKcUMaiN1Z7OrkCdhBzGe/OAZ62UvUlBqSvWLGwgaKY1jnsHrwnVWpOHcIu2wG0nIcyYqaT6ZUUJWjeu+5ckHNzlbiLwGKq8Uel+kFag9JGDO2qLKb2AYFrnYMhs4wRjdKV63/MfVX4Euq/iba/Im3CCqtS2QkC+wIyOUk34lg22SUFqNSWlLZjZ8oMoVYQo1ZEAzSNRi17Akm53cBCuCwyJmBc7zmfDdMVXsOV7r5cjmJfSqwoxUqMUcoLsFJ5d1/C94qAlciCOcfNEJqJc7WzPLuH63wHpPDCm5Ui6HNb55buY2QAq1Z11stq4BTmptwOY+4mRsM+sFtcsQBbO5JsBKH79m2Cuz4ltg7CcSbF28BqjxaegdbAWiaC4WglK4GouZva7HNjnvJMufSlNdtRP7hAKs9wRvg1qljbdMr6eoj378lY/S0wV9PUC6rrapbZrDVBItkDvzG2AZ62BtMtZw28eo/3E09bMOl2ul/hI8jl9oHWE0qyZN2l9Ry+0xaW6dJQ1kooXcZFmuqg8Btb0mDrYB03hC7qyC7MQpA2k+6fp4CBVitJYnHuEZ2csckHZQcdUZZbznDek9FjDYYGme2pBdviv2SCPhFxYd1rzdoTRa4Vc7F29pt38q8Pn5S/G2dGU7GBB8RaAmU9JhsmyPp+U4rVYPqIVJB2gkHmJyGMCyq95JVJAtpVisJYevfYYInSsRmIBHSXuuOR+Y+s60Uuu4B2DM/bx+8zriA6lWyJ2br9036NXUXicz9pAy060q0rR61MvaXNeO9fH52mOnWmunWgLS1p0K9swZ1pqhqPrD2WueTd4+vnBnWwGCjitYX7++WddF6lidU384QFe8Aj10E6be5TkfpLuumDSD3I5fWUEtEdI3o2V71E4ntD+knaOB9I1rjVxFNijBgQRxB7gR3GJOFoURqiuXXWFwy2KgG+0Wvu2X2xj0doOiLPSrueKMluRGqfIwKcMrVG1UFyfIcSe4RiweASkp95yM23cF3CTDU0piyC18ye8niZ9etIMtWrMdWtJjHs3POD6taEAdMU9WqSNjdrz2+oMwQrpXtAHcfQwVKqSSSQJJJJA7p7c4QpVoMnQc74Br98VNp8O+UVdMNsQavE5n7CCpIFtesXNySTvOcqvJJAl5dTrWy7pSJIGrrpyBrsB+rd8z3mjDm2cDTpM3CndcfrymTD4lqZ1kYqeB+e+W1qlwRMkBlwPSc7Kq3/AJl2+I+3lDFPHpUF0YMPUcxtEQp0jlTcEg7xkYDjjnuL7oIq1plpaVa1n7Q37D+cofEAyI7xFS4ImGdO95zKqSSSQJJJJAkkkkCSSSQJJJIIEkkkgSfbz5JA+3nySQwJJJJAkkkkCSSSQJJJJA//2Q==" alt="Profile picture" class="about-pic" />
+      </div>
+      <div class="about-details-container">
+        <div class="about-containers">
+          <div class="details-container">
+            <img src="images/experience.png" alt="Experience icon" class="icon" />
+            <h3>Experience</h3>
+            <p>Fresher <br />Software Development</p>
+          </div>
+          <div class="details-container">
+            <img src="images/education.png" alt="Education icon" class="icon" />
+            <h3>Education</h3>
+            <p>B. Tech (E&TC)<br />Honours in AIML</p>
+          </div>
+        </div>
+        <div class="text-container">
+          <p>
+           
+I am Sreekanth Kumbagiri, an asparing Computer Science Engineer hailing from the 2025 batch of Gitam School Of Technology. My journey through academia has been fueled by an unwavering passion for technology and innovation. Throughout my time at college, I delved deep into the world of Computer programming and networking.
+          </p>
+        </div>
+      </div>
+    </div>
+    <img src="images/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#experience'" />
+  </section>
+  <section id="experience">
+    <p class="section__text__p1">Explore My</p>
+    <h1 class="title">Experience</h1>
+    <div class="experience-details-container">
+      <div class="about-containers">
+        <div class="details-container">
+          <h2 class="experience-sub-title">Software Development</h2>
+          <div class="article-container">
+            <article>
+              <img src="images/checkmark.png" alt="Experience icon" class="icon" />
+              <div>
+                <h3>HTML</h3>
+                <p>Experienced</p>
+              </div>
+            </article>
+            <article>
+              <img src="images/checkmark.png" alt="Experience icon" class="icon" />
+              <div>
+                <h3>CSS</h3>
+                <p>Experienced</p>
+              </div>
+            </article>
+            <article>
+              <img src="images/checkmark.png" alt="Experience icon" class="icon" />
+              <div>
+                <h3>Python</h3>
+                <p>Intermediate</p>
+              </div>
+            </article>
+            <article>
+              <img src="images/checkmark.png" alt="Experience icon" class="icon" />
+              <div>
+                <h3>JavaScript</h3>
+                <p>Basic</p>
+              </div>
+            </article>
+            <article>
+              <img src="images/checkmark.png" alt="Experience icon" class="icon" />
+              <div>
+                <h3>C</h3>
+                <p>Intermediate</p>
+              </div>
+            </article>
+            <article>
+              <img src="images/checkmark.png" alt="Experience icon" class="icon" />
+              <div>
+                <h3>Matlab</h3>
+                <p>Intermediate</p>
+              </div>
+            </article>
+            <article>
+              <img src="images/checkmark.png" alt="Experience icon" class="icon" />
+              <div>
+                <h3>Proteus</h3>
+                <p>Intermediate</p>
+              </div>
+            </article>
+            <article>
+              <img src="images/checkmark.png" alt="Experience icon" class="icon" />
+              <div>
+                <h3>Keil µVision</h3>
+                <p>Intermediate</p>
+              </div>
+            </article>
+          </div>
+        </div>
+        <div class="details-container">
+          <h2 class="experience-sub-title">Software Development</h2>
+          <div class="article-container">
+            <article>
+              <img src="images/checkmark.png" alt="Experience icon" class="icon" />
+              <div>
+                <h3>PostgreSQL</h3>
+                <p>Basic</p>
+              </div>
+            </article>
+            <article>
+              <img src="images/checkmark.png" alt="Experience icon" class="icon" />
+              <div>
+                <h3>Node JS</h3>
+                <p>Intermediate</p>
+              </div>
+            </article>
+            <article>
+              <img src="images/checkmark.png" alt="Experience icon" class="icon" />
+              <div>
+                <h3>Express JS</h3>
+                <p>Intermediate</p>
+              </div>
+            </article>
+            <article>
+              <img src="images/checkmark.png" alt="Experience icon" class="icon" />
+              <div>
+                <h3>Git</h3>
+                <p>Intermediate</p>
+              </div>
+            </article>
+            <article>
+              <img src="images/checkmark.png" alt="Experience icon" class="icon" />
+              <div>
+                <h3>DSA</h3>
+                <p>Intermediate</p>
+              </div>
+            </article>
+            <article>
+              <img src="images/checkmark.png" alt="Experience icon" class="icon" />
+              <div>
+                <h3>DBMS</h3>
+                <p>Intermediate</p>
+              </div>
+            </article>
+            <article>
+              <img src="images/checkmark.png" alt="Experience icon" class="icon" />
+              <div>
+                <h3>DBMS</h3>
+                <p>Intermediate</p>
+              </div>
+            </article>
+            <article>
+              <img src="images/checkmark.png" alt="Experience icon" class="icon" />
+              <div>
+                <h3>DBMS</h3>
+                <p>Intermediate</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </div><br>
+    <br><img src="images/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#projects'" />
+  </section><br><br>
+  <section id="projects">
+    <p class="section__text__p1">Browse My Recent</p>
+    <h1 class="title">Projects</h1>
+    <div class="experience-details-container">
+      <div class="about-containers">
+        <div class="details-container color-container">
+          <div class="article-container">
+            <img src="images/project-11.png" alt="Project 1" class="project-img" />
+          </div>
+          <h2 class="experience-sub-title project-title">Project One</h2>
+          <p class="section__text__p11">Bank Transaction System at small scale using C. Which enables to store the data
+            of credit and debit transaction.</p>
+          <br>
+          <div class="btn-container">
+            <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/'">
+              Github
+            </button>
+            <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/'">
+              Live Demo
+            </button>
+          </div>
+        </div>
+        <div class="details-container color-container">
+          <div class="article-container">
+            <img src="images/project-2.png" alt="Project 2" class="project-img" />
+          </div>
+          <h2 class="experience-sub-title project-title">Project Two</h2>
+          <div class="btn-container">
+            <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/'">
+              Github
+            </button>
+            <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/'">
+              Live Demo
+            </button>
+          </div>
+        </div>
+        <div class="details-container color-container">
+          <div class="article-container">
+            <img src="images/project-3.png" alt="Project 3" class="project-img" />
+          </div>
+          <h2 class="experience-sub-title project-title">Project Three</h2>
+          <div class="btn-container">
+            <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/'">
+              Github
+            </button>
+            <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/'">
+              Live Demo
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <img src="images/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#contact'" />
+  </section>
+  <section id="contact">
+    <p class="section__text__p1">Get in Touch</p>
+    <h1 class="title">Contact Me</h1>
+    <div class="contact-info-upper-container">
+      <div class="contact-info-container">
+        <!-- <a href="https://www.instagram.com" target="_blank"> Comment for adding link to icon -->
+        <img src="images/email.png" alt="Email icon" class="icon contact-icon email-icon" />
+        <p><a href="mailto:kumbagirisreekanth@gmail.com" target="_blank">sk8266132@gmail.com</a></p>
+      </div>
+      <div class="contact-info-container">
+        <img src="images/linkedin.png" alt="LinkedIn icon" class="icon contact-icon" />
+        <p><a href=https://www.linkedin.com/in/sreekanth-kumbagiri-70ab00283/ target="_blank">LinkedIn</a></p>
+      </div>
+      
+      <div class="contact-info-container">
+        <a href="tel:+917893934760">
+          <img src="images/call.png" alt="LinkedIn icon" class="icon contact-icon" />
+          <p><a href="tel:+917893934760">+917893934760</a></p>
+      </div>
+      <div class="contact-info-container">
+        <img src="images/twitter.png" alt="LinkedIn icon" class="icon twitter-icon" />
+        <p><a href="https://twitter.com/Sreekanth7893" target="_blank">Twitter</a></p>
+      </div>
+    </div>
+  </section>
+  <footer>
+    <nav>
+      <div class="nav-links-container">
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+    <p>Copyright &#169; 2023 Sreekanth Kumbagiri. All Rights Reserved.</p>
+  </footer>
+  <script src="script.js"></script>
+</body>
+
+</html>
